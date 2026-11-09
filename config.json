@@ -1,0 +1,32 @@
+{
+  "algorithm": "SPFD synthetic mechanism demo",
+  "seed": 1729,
+  "torch_threads": 1,
+  "device": "cpu",
+  "synthetic_only": true,
+  "publication_evidence": false,
+  "learning_rate": 0.003,
+  "train_steps": 24,
+  "warmup_steps": 12,
+  "mechanism": {
+    "spectral_clusters": 8,
+    "cached_top_masks": 2,
+    "xi_max": 0.5,
+    "protection_rho": 0.25,
+    "regional_dimension": 128,
+    "roi_grid": 7,
+    "query_weight": 1.0,
+    "regional_weight": 0.1
+  },
+  "reduced_demo_settings": {
+    "queries": 3,
+    "image_size": [
+      24,
+      24
+    ],
+    "regional_feature_stride": 2,
+    "regional_feature_channels": 16,
+    "roi_sampling": "7x7 bin-center grid_sample, not native RoIAlign",
+    "composition": "identity"
+  }
+}
